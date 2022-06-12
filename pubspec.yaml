@@ -12,6 +12,8 @@ dependencies:
   flutter_bloc: ^8.0.1
   get_it: ^7.2.0
   http: ^0.13.4
+  faker: ^2.0.0
+  cached_network_image:
 dev_dependencies:
   flutter_test:
     sdk: flutter

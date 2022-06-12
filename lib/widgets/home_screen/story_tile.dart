@@ -1,5 +1,6 @@
 import 'dart:ui';
 
+import 'package:cached_network_image/cached_network_image.dart';
 import 'package:demo/cubits/image_fetch/imagefetch_cubit.dart';
 import 'package:demo/models/picsum_result/picsum_result.dart';
 import 'package:demo/widgets/home_screen/loader.dart';
@@ -52,9 +53,8 @@ class StoryTile extends StatelessWidget {
                               borderRadius: BorderRadius.circular(10),
                               image: DecorationImage(
                                   fit: BoxFit.cover,
-                                  image: NetworkImage(
-                                    data?.downloadUrl ?? "",
-                                  ))),
+                                  image: CachedNetworkImageProvider(
+                                      data?.downloadUrl ?? ""))),
                           child: Container(),
                         ),
                       ),
