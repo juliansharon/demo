@@ -67,7 +67,7 @@ class _PostState extends State<Post> {
                     liked = !liked;
                   }),
                   child: Icon(
-                    Icons.favorite,
+                    liked ? Icons.favorite : Icons.favorite_border_outlined,
                     color: liked ? Colors.red : Colors.grey.shade400,
                   ),
                 )
