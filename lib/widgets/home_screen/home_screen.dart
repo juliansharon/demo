@@ -27,16 +27,7 @@ class _HomeScreenState extends State<HomeScreen> {
       child: Scaffold(
         body: BlocBuilder<ImagefetchCubit, ImagefetchState>(
           builder: (context, state) {
-            if (state is ImagefectchLoading) {
-              return const Loader();
-            }
-            if (state is ImageFetchError) {
-              return const ErrorPage();
-            }
-            if (state is ImagefetchLoaded) {
-              return MainView(data: state.resultdata);
-            }
-            return Container();
+            return const MainView();
           },
         ),
       ),
